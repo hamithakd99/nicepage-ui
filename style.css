@@ -136,7 +136,7 @@ button{
 }
 .sub-content .cards{
   height: auto;
-  width: 70%;
+  width: 90%;
   background-color: transparent;
   margin: 50px auto;
   display: flex;
@@ -179,7 +179,7 @@ button{
 .form-section{
   height: 120vh;
   width: 100%;
-  background-image: linear-gradient(173deg, rgba(56, 42, 78, 0.631) 0%, rgba(2,3,33,0.7259278711484594) 91%), url('https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/e10b49165d2c5fe1ab8b208f/klklu8-min.jpg');
+  background-image: linear-gradient(173deg, rgba(56, 42, 78, 0.631) 0%, rgba(2,3,33,0.7259278711484594) 70%), url('https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/e10b49165d2c5fe1ab8b208f/klklu8-min.jpg');
   display: flex;
   color: aliceblue;
   background-size: cover;
@@ -264,13 +264,72 @@ input:focus{
 }
 form button{
   background-color: rgb(255, 230, 0);
-  padding: 10px 0;
+  padding: 15px 0;
   font-size: 20px;
   border-radius: 50px;
+  font-weight: 900;
+
 }
 textarea{
   height: 100px;
   width: 100%;
   padding: 12px 12px;
   margin-top: 10px;
+}
+
+/* footer */
+footer{
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(43, 37, 60);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+footer a{
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  font-size: 30px;
+}
+footer a span{
+  color: rgb(255, 187, 0);
+}
+.social-media{
+  display: flex;
+  justify-content: center;
+}
+.social-media a{
+  color: antiquewhite;
+}
+.line{
+  width: 80%;
+  border-bottom: 1px solid antiquewhite;
+}
+.footer-text p{
+  text-align: center;
+  color: antiquewhite;
+}
+.copyrights{
+  background-color: gray;
+  color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.copyrights span{
+  width: 3px;
+  height: 3px;
+}
+
+
+/* media query */
+@media screen and (max-width: 1000px){
+  nav{
+
+  }
 }
