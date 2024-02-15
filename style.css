@@ -440,8 +440,29 @@ footer a span{
     top: 521px;
     right: 73px
   }
+  .sub-content{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    font-size: 0.9rem;
+  }
   
+  .sub-content .cards{
+    /* height: auto;
+    width: 90%;
+    background-color: transparent;
+    margin: 50px auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+  }
+  .card{
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
+
 
 /* tab */
 @media (max-width: 768px) {
