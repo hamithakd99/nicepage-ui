@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;500;600;700&display=swap');
 
+Clearfix Code
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 *{
   padding: 0;
   margin: 0;
@@ -63,6 +79,9 @@ button{
   border: 1px solid black;
   padding: 10px 20px;
 }
+.toggle-btn {
+  display: none;
+}
 
 /* header-section */
 
@@ -79,17 +98,18 @@ button{
   width: 40%;
   height: 100%;
   right: 0;
-  position: relative;
 }
 .box-one{
   width: 351px;
   height: 340px;
   background-color: rgba(255, 187, 0, 0.925);
   border-radius: 10px;
-  position: absolute;
+  /* position: absolute; */
   z-index: 0;
+  top: 200px;
   margin-top: 120px;
-  left: 120px;
+  margin-left: 100px;
+  /* right: 125px; */
 }
 .box-two{
   width: 351px;
@@ -98,8 +118,8 @@ button{
   border-radius: 10px;
   position: absolute;
   z-index: 1;
-  margin-top: 180px;
-  left: 60px;
+  /* margin-top: 180px; */
+  top: 250px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -154,9 +174,9 @@ button{
   background-color: aliceblue;
 
 }
-.cards .card-three{
+/* .cards .card-three{
   margin-right: 0;
-}
+} */
 
 .cards .image{
   width: 100%;
@@ -241,9 +261,7 @@ form h4{
   display: flex;
   justify-content: space-between;
 }
-form .message{
-  /* margin-bottom: 15px; */
-}
+
 input{
   height: 50px;
   width: 250px;
@@ -269,6 +287,9 @@ form button{
   border-radius: 50px;
   font-weight: 900;
 
+}
+form button:hover{
+  background-color: antiquewhite;
 }
 textarea{
   height: 100px;
@@ -321,15 +342,113 @@ footer a span{
   justify-content: center;
   padding: 10px;
 }
-.copyrights span{
+.copyrights bxl-xing{
   width: 3px;
   height: 3px;
 }
 
-
 /* media query */
-@media screen and (max-width: 1000px){
+
+/* mobile */
+@media (max-width: 425px) {
+  
   nav{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .nav-logo{
+    font-size: 2rem;
+  }
+  .links{
+    position: absolute;
+    top: 125px;
+    width: 100%;
+    height: 30vh;
+    z-index: 1000;
+    border: 1px solid red;
+    right: 0;
+    background-color: rgb(255, 196, 0);
+    margin: auto;
+    border-radius: 20px;
+    display: none;
+  }
+  .links ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+  }
+  .links ul a{
+    padding: 10px 0;
+  }
+  .links ul li{
+    border-bottom: 1px solid black;
 
   }
+  /* .links ul li a{
+    padding: 15px 20px;
+  } */
+  .buttons{
+    /* margin-left: 60px; */
+
+  }
+  .signin{
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  .signup{
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  /* .main-content{
+    width: 100%;
+    height: 150vh;
+    background-position: left;
+    background-size: cover;
+  }
+  .main-content-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    left: 3%;
+  }
+  .box-one, .box-two{
+    
+
+  } */
+  .main-content{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150vh;
+  }
+  .box-one{
+    width: 302px;
+    height: 329px;
+    margin-top: 341px;
+    margin-left: -166px;
+  } 
+  .box-two{
+    width: 295px;
+    height: 299px;
+    top: 521px;
+    right: 73px
+  }
+  
+}
+
+/* tab */
+@media (max-width: 768px) {
+  
+}
+
+/* laptop */
+@media (max-width: 1024px) {
+  
 }

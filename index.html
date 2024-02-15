@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<h>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicepage</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
+
+  <!-- animation -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <!-- Other meta tags, title, etc. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   
 </head>
 <body>
   <!-- navigation bar --> 
   <nav>
-    <a href="">Nice<span>page</span></a>
+    <a href="" class="nav-logo">Nice<span>page</span></a>
+    
     <div class="links">
       <ul>
         <li><a href="">Home</a></li>
@@ -23,16 +36,23 @@
     <div class="buttons">
       <button class="signin">Sign In</button>
       <button class="signup">Sign Up</button>
+      
+      
     </div>
+
   </nav>
   <!-- navigation bar -->
 
   <!-- header section -->
   <header>
     <div class="main-content">
-      <div class="main-content-box">
-        <div class="box-one"></div>
-        <div class="box-two">
+      <div class="main-content-box clearfix">
+        <div class="box-one" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"></div>
+        <div class="box-two" data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
           <h1>Contact Us</h1>
           <p>Image from Freepik</p>
           <button>Learn more</button>
@@ -41,10 +61,11 @@
     </div>
     
     <div class="sub-content">
-      <h1 class="main-text">Office locations</h1>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proiden</p>
+      <h1 class="main-text" data-aos="zoom-in" data-aos-duration="500">Office locations</h1>
+      <p data-aos="zoom-in" data-aos-duration="500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proiden</p>
       <div class="cards">
-        <div class="card-one">
+        <div class="card card-one" data-aos="fade-up"
+        data-aos-duration="3003">
           <div class="image">
             <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/e10b49165d2c5fe1ab8b208f/klklu8-min.jpg" alt="">
           </div>
@@ -55,7 +76,8 @@
           <p class="text">building@company.com</p>
         
         </div>
-        <div class="card-two">
+        <div class="card card-two" data-aos="fade-up"
+        data-aos-duration="3002">
           <div class="image">
             <img src="https://assets.nicepagecdn.com/d2cc3eaa/73962/images/building_1127-3355.jpg" alt="">
           </div>
@@ -67,7 +89,8 @@
           <p class="text">building@company.com</p>
 
         </div>
-        <div class="card-three">
+        <div class="card card-three"data-aos="fade-up"
+        data-aos-duration="3001">
           <div class="image">
             <img src="	https://assets.nicepagecdn.com/d2cc3eaa/73962/images/empty-floor-front-modern-buildin.jpg
             " alt="">
@@ -165,6 +188,24 @@
     </div>
   </footer>
   <!-- footer section -->
+
+
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const links = document.querySelector('.links');
+
+  toggleBtn.addEventListener('click', function() {
+    links.classList.toggle('show');
+  });
+});
+
+  </script>
   
 </body>
 </html>
