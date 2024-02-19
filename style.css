@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;500;600;700&display=swap');
 
-Clearfix Code
+/* Clearfix Code */
 
 .clearfix:after {
   visibility: hidden;
@@ -15,6 +15,11 @@ Clearfix Code
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 *{
   padding: 0;
