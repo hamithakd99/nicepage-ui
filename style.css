@@ -79,7 +79,7 @@ button{
   border: 1px solid black;
   padding: 10px 20px;
 }
-.toggle-btn {
+.bx-menu{
   display: none;
 }
 
@@ -104,12 +104,9 @@ button{
   height: 340px;
   background-color: rgba(255, 187, 0, 0.925);
   border-radius: 10px;
-  /* position: absolute; */
   z-index: 0;
-  top: 200px;
   margin-top: 120px;
   margin-left: 100px;
-  /* right: 125px; */
 }
 .box-two{
   width: 351px;
@@ -146,7 +143,8 @@ button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 45px;
+  justify-content: center;
+  padding: 30px 0;
 }
 .sub-content p, .main-text{
   text-align: center;
@@ -156,7 +154,7 @@ button{
 }
 .sub-content .cards{
   height: auto;
-  width: 90%;
+  width: 80%;
   background-color: transparent;
   margin: 50px auto;
   display: flex;
@@ -170,13 +168,13 @@ button{
   flex-direction: column;
   align-items: flex-start;
   padding: 20px 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   background-color: aliceblue;
 
 }
-/* .cards .card-three{
+.cards .card-three{
   margin-right: 0;
-} */
+}
 
 .cards .image{
   width: 100%;
@@ -199,7 +197,7 @@ button{
 .form-section{
   height: 120vh;
   width: 100%;
-  background-image: linear-gradient(173deg, rgba(56, 42, 78, 0.631) 0%, rgba(2,3,33,0.7259278711484594) 70%), url('https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/e10b49165d2c5fe1ab8b208f/klklu8-min.jpg');
+  background-image: linear-gradient(173deg, rgba(43,37,60,0.3981967787114846) 0%, rgba(43,37,60,1) 91%), url('https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/e10b49165d2c5fe1ab8b208f/klklu8-min.jpg');
   display: flex;
   color: aliceblue;
   background-size: cover;
@@ -246,6 +244,7 @@ button{
 .right-slider{
   display: flex;
   align-items: center;
+  
 }
 form{
   display: flex;
@@ -349,8 +348,8 @@ footer a span{
 
 /* media query */
 
-/* mobile */
-@media (max-width: 425px) {
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
   
   nav{
     height: 120px;
@@ -368,7 +367,6 @@ footer a span{
     width: 100%;
     height: 30vh;
     z-index: 1000;
-    border: 1px solid red;
     right: 0;
     background-color: rgb(255, 196, 0);
     margin: auto;
@@ -404,6 +402,9 @@ footer a span{
     font-size: 1rem;
     padding: 5px 10px;
   }
+  .bx-menu{
+    display: block;
+  }
   /* .main-content{
     width: 100%;
     height: 150vh;
@@ -429,16 +430,17 @@ footer a span{
     height: 150vh;
   }
   .box-one{
-    width: 302px;
+    width: 307px;
     height: 329px;
-    margin-top: 341px;
-    margin-left: -166px;
+    margin-top: 698px;
+    margin-left: -141px;
   } 
   .box-two{
-    width: 295px;
-    height: 299px;
-    top: 521px;
-    right: 73px
+    width: 326px;
+    height: 333px;
+    top: 863px;
+    /* right: 73px; */
+    left: 78px;
   }
   .sub-content{
     display: flex;
@@ -506,12 +508,68 @@ footer a span{
 }
 
 
-/* tab */
-@media (max-width: 768px) {
-  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  nav{
+    /* height: 100px; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 0px; */
+  }
+  .nav-logo{
+    /* font-size: 2rem; */
+  }
+  .bx-menu{
+    display: block;
+  }
+  .buttons button, .links{
+    display: none;
+  }
+  .main-content{
+    object-fit: cover;
+    background-position: center;
+    height: 110vh;
+  }
+  .box-one{
+    /* width: 367px;
+    height: 362px;
+    margin-top: 323px;
+    margin-left: -113px; */
+    width: 342px;
+    height: 342px;
+    margin-top: 335px;
+    margin-left: -201px;
+  } 
+  .box-two{
+    /* width: 345px;
+    height: 355px;
+    top: 470px;
+    right: 103px; */
+    width: 326px;
+    height: 356px;
+    top: 504px;
+    right: 76px;
+  }
 }
 
-/* laptop */
-@media (max-width: 1024px) {
-  
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  body {
+    background-color: rgb(55, 0, 128);
+}
+}
+
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+  body {
+      background-color: green;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  body {
+      background-color: white;
+  }
 }
